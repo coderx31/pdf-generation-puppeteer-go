@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        th,td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-size: 14px;
+            word-break: break-all;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="text">
+            <h3>Sample Heading</h3>
+            <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks
+                as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200
+                Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
+                reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour,
+                or non-characteristic words etc.
+            </p>
+        </div>
+        <div class="table">
+            {{^hidePeople}}
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#people}}
+                <tr>
+                    <td>{{ FirstName }}</td>
+                    <td>{{ LastName }}</td>
+                    <td>{{ Age }}</td>
+                    <td>{{ City }}</td>
+                </tr>
+                {{/people}}
+                </tbody>
+            </table>
+            {{/hidePeople}}
+        </div>
+    </div>
+</body>
+</html>
