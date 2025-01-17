@@ -1,8 +1,8 @@
 module PDF-generation
 
-go 1.20
+go 1.23
 
 require (
-	github.com/cbroglie/mustache v1.4.0 // indirect
-	github.com/google/uuid v1.5.0 // indirect
+	github.com/cbroglie/mustache v1.4.0
+	github.com/google/uuid v1.5.0
 )
